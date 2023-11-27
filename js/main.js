@@ -70,7 +70,7 @@ function render() {
     //this moves the value of the board item into the squares[idx]
     squares[index].textContent = mark;
     });
-    messages.textContent = win === 'T' ? `That's a tie!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
+    messages.textContent = win === 'T' ? `Égalitée!` : win ? `${win} Gagne la partie!` : `C'est le tour de ${turn}!`;
     };
 
 init();
