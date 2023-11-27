@@ -16,6 +16,11 @@ let board;
 let turn = 'X';
 let win;
 
+/*----- local storage values -----*/
+
+localStorage.setItem('victoire X',0);
+localStorage.setItem('victoire O',0);
+
 /*----- cached element references -----*/
 
 const squares = Array.from(document.querySelectorAll('#board div'));
@@ -30,9 +35,14 @@ document.getElementById('reset-button').addEventListener('click', init);
 
 function getWinner() {
     let winner = null;
+    let victoire;
     winningCombos.forEach(function(combo, index) {
         if (board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]]) winner = board[combo[0]];
         });
+        if(winner != null){
+            victoire = parseInt(localStorage.getItem("victoire "+winner))
+            localStorage.setItem("victoire "+winner, victoire+1);
+        }
         return winner ? winner : board.includes('') ? null : 'T';
 };
 
