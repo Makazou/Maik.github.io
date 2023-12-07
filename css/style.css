@@ -2,9 +2,14 @@
     font-family: "comic-sans";
     src: url("../font/COMIC.TTF");
 }
+html, body{
+    height: 100%;
+}
 body {
     text-align: center;
+    /*centre le text*/
     font-family: "Arial, Helvetica, sans-serif";
+    margin: 0;
     }
     
     
@@ -26,7 +31,7 @@ h2 {
 }
 
 .flex-column {
-    height: 100%;
+
     width: 100%;
     flex-direction: column;
     /* tells the container to drop down once it reaches max-width */
@@ -44,10 +49,13 @@ h2 {
     height: 140px;
     width: 140px;
     font-family: "comic-sans";
+        /*change la police du tableau de tic tac toe en comic sans*/
     font-size: 80px;
     display: flex;
     align-items: center;
+    /*aligne les items au centre*/
     justify-content: center;
+    /*met les contenus de square en justifier*/
 }
     
     
@@ -58,4 +66,26 @@ h2 {
     height: 55px;
     width: 100px;
     margin: 10px;
+}
+footer {
+    display: grid;
+    background-color: blue;
+    /*enleve la marge du bas du footer*/
+    align-self: flex-end;
+    /*met le footer au bas de la page*/
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+#image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    align-content: flex-end;
+}
+#lien-git{
+    font-size: large;
+    text-align: left;
+}
+#nom{
+    font-size: large;
 }
